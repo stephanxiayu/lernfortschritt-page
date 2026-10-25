@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Impressum – Stephan Granzow</title>
+  <title>Impressum & Datenschutzerklärung – Lern-Tracker</title>
   <style>
     :root {
       --bg-color: #0D1117;
@@ -45,6 +45,29 @@
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
     }
 
+    .nav-bar {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .nav-link {
+      background: var(--code-bg);
+      border: 1px solid var(--card-border);
+      color: var(--text-main);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 20px;
+      transition: all 0.2s ease;
+    }
+
+    .nav-link:hover {
+      border-color: var(--info-color);
+      color: var(--info-color);
+    }
+
     .header-badge {
       display: inline-flex;
       align-items: center;
@@ -70,6 +93,13 @@
       margin-bottom: 8px;
     }
 
+    .section-divider {
+      border: none;
+      height: 1px;
+      background: var(--card-border);
+      margin: 40px 0;
+    }
+
     .subtitle {
       font-size: 13px;
       color: var(--text-secondary);
@@ -81,9 +111,9 @@
 
     h2 {
       color: var(--text-main);
-      font-size: 16px;
+      font-size: 17px;
       font-weight: 700;
-      margin-top: 28px;
+      margin-top: 26px;
       margin-bottom: 10px;
       display: flex;
       align-items: center;
@@ -110,6 +140,29 @@
       font-weight: 600;
     }
 
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 16px;
+    }
+
+    li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 10px;
+      font-size: 14px;
+      color: #C9D1D9;
+    }
+
+    li::before {
+      content: "•";
+      position: absolute;
+      left: 6px;
+      color: var(--accent-color);
+      font-weight: bold;
+      font-size: 16px;
+    }
+
     .contact-card {
       background: var(--code-bg);
       border: 1px solid var(--card-border);
@@ -131,6 +184,20 @@
       text-decoration: underline;
     }
 
+    .highlight-box {
+      background: rgba(88, 166, 255, 0.08);
+      border: 1px solid rgba(88, 166, 255, 0.25);
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-bottom: 24px;
+      font-size: 14px;
+      color: #C9D1D9;
+    }
+
+    .highlight-box strong {
+      color: var(--info-color);
+    }
+
     footer {
       margin-top: 36px;
       padding-top: 18px;
@@ -144,52 +211,113 @@
 <body>
 
   <div class="container">
-    <div class="header-badge">Rechtliche Angaben</div>
-    <h1>Impressum</h1>
-    <span class="subtitle">Angaben gemäß § 5 Digitale-Dienste-Gesetz (DDG) / ehemals TMG</span>
-
-    <h2>Angaben zum Diensteanbieter</h2>
-    <div class="contact-card">
-      <strong>Stephan Granzow – Die Software-Schmiede</strong><br>
-      Einzelunternehmen<br>
-      Inhaber: Stephan Granzow<br>
-      c/o IP-Management #4532<br>
-      Ludwig-Erhard-Str. 18<br>
-      20459 Hamburg
+    
+    <!-- Navigation zum schnellen Springen -->
+    <div class="nav-bar">
+      <a href="#impressum" class="nav-link">Zum Impressum</a>
+      <a href="#datenschutz" class="nav-link">Zur Datenschutzerklärung</a>
     </div>
 
-    <h2>Kontakt</h2>
-    <div class="contact-card">
-      E-Mail: <a href="mailto:info@shiftly24.com">info@shiftly24.com</a>
-    </div>
+    <!-- ==================== TEIL 1: IMPRESSUM ==================== -->
+    <section id="impressum">
+      <div class="header-badge">Rechtliche Anbieterkennzeichnung</div>
+      <h1>Impressum</h1>
+      <span class="subtitle">Angaben gemäß § 5 Digitale-Dienste-Gesetz (DDG)</span>
 
-    <h2>Umsatzsteuer</h2>
-    <p>Als Kleinunternehmer im Sinne von § 19 Abs. 1 UStG wird keine Umsatzsteuer berechnet und nicht gesondert ausgewiesen.</p>
+      <h2>Angaben zum Diensteanbieter</h2>
+      <div class="contact-card">
+        <strong>Stephan Granzow – Die Software-Schmiede</strong><br>
+        Einzelunternehmen<br>
+        Inhaber: Stephan Granzow<br>
+        c/o IP-Management #4532<br>
+        Ludwig-Erhard-Str. 18<br>
+        20459 Hamburg
+      </div>
 
-    <h2>Verantwortlich für den Inhalt</h2>
-    <p>
-      Stephan Granzow<br>
-      c/o IP-Management #4532<br>
-      Ludwig-Erhard-Str. 18<br>
-      20459 Hamburg
-    </p>
+      <h2>Kontakt</h2>
+      <div class="contact-card">
+        E-Mail: <a href="mailto:info@shiftly24.com">info@shiftly24.com</a>
+      </div>
 
-    <h2>Haftung für Inhalte und Markenhinweis</h2>
-    <p>
-      Alle Informationen und Angaben auf dieser Website und in den angebotenen Anwendungen sind mit größter Sorgfalt zusammengestellt worden. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann jedoch keine Gewähr übernommen werden.
-    </p>
-    <p>
-      Verwendete Software- und Markennamen unterliegen im Allgemeinen warenzeichen-, marken- oder patentrechtlichem Schutz.
-    </p>
+      <h2>Umsatzsteuer</h2>
+      <p>Als Kleinunternehmer im Sinne von § 19 Abs. 1 UStG wird keine Umsatzsteuer berechnet und nicht gesondert ausgewiesen.</p>
 
-    <h2>Verbraucherstreitbeilegung</h2>
-    <p>
-      Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
-    </p>
+      <h2>Verantwortlich für den Inhalt</h2>
+      <p>
+        Stephan Granzow<br>
+        c/o IP-Management #4532<br>
+        Ludwig-Erhard-Str. 18<br>
+        20459 Hamburg
+      </p>
+
+      <h2>Haftungsausschluss & Markenhinweis</h2>
+      <p>
+        Alle Informationen und Angaben auf dieser Website und in den zugehörigen Anwendungen sind mit größter Sorgfalt zusammengestellt worden. Es kann jedoch keinerlei Garantie oder Haftung für die Richtigkeit, Vollständigkeit oder Aktualität der Nutzung dieser Informationen übernommen werden.
+      </p>
+      <p>
+        Die verwendeten Software- und Markennamen unterliegen im Allgemeinen warenzeichen-, marken- oder patentrechtlichem Schutz. Windows sowie Word und Excel sind eingetragene Warenzeichen der Microsoft Corp., Inc.
+      </p>
+
+      <h2>Verbraucherstreitbeilegung</h2>
+      <p>
+        Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+      </p>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- ==================== TEIL 2: DATENSCHUTZERKLÄRUNG ==================== -->
+    <section id="datenschutz">
+      <div class="header-badge">Datenschutz & Transparenz</div>
+      <h1>Datenschutzerklärung</h1>
+      <span class="subtitle">App: <strong>Lern-Tracker</strong> &bull; Stand: Oktober 2026</span>
+
+      <div class="highlight-box">
+        <strong>Privacy by Design:</strong> Der Schutz Ihrer persönlichen Daten ist uns ein wichtiges Anliegen. Diese App wurde so konzipiert, dass alle Daten (Lernzeiten, Tagesstopps und Abschlüsse) rein lokal auf Ihrem Endgerät verbleiben. Es besteht keinerlei Cloud- oder Server-Anbindung.
+      </div>
+
+      <h2>1. Verantwortlicher</h2>
+      <div class="contact-card">
+        <strong>Stephan Granzow – Die Software-Schmiede</strong><br>
+        c/o IP-Management #4532<br>
+        Ludwig-Erhard-Str. 18<br>
+        20459 Hamburg<br>
+        E-Mail: <a href="mailto:info@shiftly24.com">info@shiftly24.com</a>
+      </div>
+
+      <h2>2. Erhebung und Speicherung personenbezogener Daten in der App</h2>
+      <p>Die App erhebt, verarbeitet und speichert <strong>keine personenbezogenen Daten auf externen Servern</strong>.</p>
+      <ul>
+        <li>Alle von Ihnen erfassten Angaben (wie Lernzeiten, Hausaufgaben, Zielprüfungen, Notizen) werden <strong>ausschließlich lokal auf Ihrem Endgerät</strong> in einer internen SQLite-Datenbank gespeichert.</li>
+        <li>Es werden keine Benutzerkonten, Registrierungen oder Logins benötigt.</li>
+        <li>Es werden keine Tracking-Dienste, Werbenetzwerke oder Drittanbieter-Analysetools (wie Firebase Analytics, Google Analytics) eingesetzt.</li>
+      </ul>
+
+      <h2>3. Datenübertragung und Kontaktaufnahme per E-Mail</h2>
+      <p>
+        Da sämtliche App-Daten rein lokal auf Ihrem Smartphone verbleiben, findet keinerlei automatische Übertragung oder Weitergabe Ihrer App-Daten an den Entwickler oder an Dritte statt.
+      </p>
+      <p>
+        Selbstverständlich werden Daten, die Sie uns per E-Mail übersenden, weder weitergegeben noch zu einem anderen Zweck verwendet, als Ihre Nachricht zu beantworten. Bitte beachten Sie, dass Daten, die Sie per E-Mail übersenden, standardmäßig unverschlüsselt übertragen werden und unter Umständen von unbefugten Dritten eingesehen werden können.
+      </p>
+
+      <h2>4. Berechtigungen der App</h2>
+      <p>Die App fordert keine sensiblen Geräteberechtigungen (wie Standort, Kamera, Kontakte, Fotos oder Mikrofon) an.</p>
+
+      <h2>5. Löschung der Daten</h2>
+      <p>Sie haben jederzeit die vollständige Kontrolle über Ihre Daten. Sämtliche in der App gespeicherten Daten können durch das Löschen einzelner Einträge innerhalb der App oder durch das Deinstallieren der App vom Endgerät restlos entfernt werden.</p>
+
+      <h2>6. Rechte der Nutzer</h2>
+      <p>Da wir keine personenbezogenen Daten von Ihnen auf Servern speichern oder verarbeiten, liegen uns keine Daten vor, über die wir Auskunft erteilen oder die wir löschen könnten. Die Verwaltung obliegt vollständig Ihnen auf Ihrem Gerät.</p>
+
+      <h2>7. Änderungen dieser Datenschutzerklärung</h2>
+      <p>Wir behalten uns vor, diese Datenschutzerklärung anzupassen, falls sich die Funktionen der App oder gesetzliche Vorgaben ändern. Die jeweils aktuelle Fassung ist stets über diese Seite abrufbar.</p>
+    </section>
 
     <footer>
-      &copy; 2026 Stephan Granzow – Die Software-Schmiede
+      &copy; 2026 Stephan Granzow – Die Software-Schmiede &bull; Alle Rechte vorbehalten
     </footer>
+
   </div>
 
 </body>
